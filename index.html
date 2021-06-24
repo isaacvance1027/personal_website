@@ -21,26 +21,72 @@
 
 <body>
     <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="https://www.github.com/isaacvance1027/" id="githubText">
+                        <button type="button" class="btn btn-outline-secondary my-2 my-lg-3">Home</button>  
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/isaac-vance" id="linkedinText">
+                        <button type="button" class="btn btn-outline-primary my-2 my-lg-3">LinkedIn</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.github.com/isaacvance1027/" id="githubText">
+                        <button class="btn btn-outline-primary my-2 my-sm-3">GitHub</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./images/IsaacVanceResume.pdf"" id=" resumeText">
+                        <button class="btn btn-outline-primary my-2 my-sm-3">Resume</button>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
 
         <header>
             <h1>Isaac Christopher Vance</h1>
 
-            <img src="images/mainPhoto.jpg" alt="mainPhoto" style="width:384px;height:476px;">
+            <img src="images/mainPhoto.jpg" alt="mainPhoto" class="shadow-lg rounded" style="width:384px;height:476px;">
         </header>
+
 
         <section class="content" id="links">
             <h2>Links:</h2>
 
             <a href="https://www.linkedin.com/in/isaac-vance" id="linkedinText">
-                <button>LinkedIn</button>
+                <button class="shadow rounded">LinkedIn</button>
             </a>
 
             <a href="https://www.github.com/isaacvance1027/" id="githubText">
-                <button>GitHub</button>
+                <button class="shadow rounded">GitHub</button>
             </a>
 
             <a href="./images/IsaacVanceResume.pdf"" id=" resumeText">
-                <button id="resume" name="resume">Resume</button>
+                <button class="shadow rounded">Resume</button>
             </a>
 
 
