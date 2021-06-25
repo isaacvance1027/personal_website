@@ -12,6 +12,15 @@ header {
     float: inline-end;
 }
 
+#mainPhoto {
+    padding-top: 0px;
+}
+
+.blockquote-footer {
+    text-align: right;
+    color: white;
+}
+
 /* #searchButton {
     background: #0F78B8;
     color: white;
