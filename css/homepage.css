@@ -37,10 +37,10 @@ button:hover {
 
 button {
     background-color: white;
+    text-decoration-color: #0F78B8;
     border: 2px solid #0F78B8;
     border-radius: 4px;
     overflow: hidden;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
