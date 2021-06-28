@@ -3,7 +3,7 @@ header {
     text-align: center;
     position: relative;
     background: #0F78B8;
-    color: #ffffff;
+    color: white;
     padding: 50px 0px 80px 0px;
     overflow: hidden;
 }
@@ -12,15 +12,26 @@ a {
     color: lightgray;
 }
 
+.card {
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
 #social-links {
     float: right;
     padding-right: 10px;
 }
 
 #social {
-    background-color: #292b2c; 
+    background-color: #292b2c;
     display: 100px;
-    text-align: center; 
+    text-align: center;
 }
 
 @media (max-width:990px) {
@@ -43,9 +54,13 @@ a {
     padding-top: 0px;
 }
 
+#quotecontainer:hover {
+    cursor: pointer;
+}
+
 .blockquote-footer {
     text-align: right;
-    color: white;
+    color:whitesmoke;
 }
 
 #searchButton {
@@ -81,4 +96,3 @@ button {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
