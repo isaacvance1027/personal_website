@@ -8,6 +8,10 @@ header {
     overflow: hidden;
 }
 
+#social {
+    text-align: center;
+}
+
 #searchBar {
     float: inline-end;
 }
@@ -54,4 +58,8 @@ button {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+#social {
+    display: 100px;
 }

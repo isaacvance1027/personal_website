@@ -13,7 +13,7 @@
         href="https://fedora.teachablecdn.com/assets/bootstrap-d989a3f5b1f1bca0585c204acf93e7e781ab3db1f16f403a5e77336f1c4d4c0f.css"
         data-turbolinks-track="true">
 
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <script src="https://use.fontawesome.com/eb4e85667e.js"></script>
     <link rel="stylesheet" href="css/homepage.css">
     <title>Isaac Vance's Personal Website</title>
 </head>
@@ -37,12 +37,6 @@
                         <a class="nav-link" href="./contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/isaac-vance">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.github.com/isaacvance1027/">GitHub</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="./images/IsaacVanceResume.pdf">Resume</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -58,36 +52,38 @@
                         </div>
                     </li>
                 </ul>
+
             </div>
         </nav>
 
-        <header>
+        <header class="header">
 
-            <img src="images/mainPhoto.jpg" alt="mainPhoto" id="mainPhoto" class="shadow-lg rounded"
+            <div class="container" id="sub-image"></div>
+            <img class="profile-image" src="images/mainPhoto.jpg" alt="Isaac Vance - Portrait"
                 style="width:384px;height:476px;">
-            <div class="container" id="sub-image">
+
+            <div class="container">
                 <p>The only way to make sense out of change is to plunge into it, move with it, and join the dance.</p>
                 <footer class="blockquote-footer">Alan Watts</footer>
             </div>
+            </div>
+
         </header>
 
-        <section class="container">
-            <h2>Links:</h2>
-            <a href="https://www.linkedin.com/in/isaac-vance" id="linkedinText">
-                <button>LinkedIn</button>
-            </a>
+        <div class="jumbotron jumbotron-fluid" id="social">
+            <ul class="social list-inline">
+                <li><a href="https://www.linkedin.com/in/isaac-vance" target="_blank"
+                        aria-label="LinkedIn Profile"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li><a href="https://github.com/isaacvance1027" target="_blank" aria-label="Github Profile"><i
+                            class="fa fa-github-alt fa-2x"></i></a></li>
+                <li><a href="https://stackoverflow.com/users/16335378/isaac-vance?tab=profile" target="_blank"
+                        aria-label="StackOverflow Profile"><i class="fa fa-stack-overflow fa-2x"></i></a></li>
+                <li class="last-item"><a href="https://www.instagram.com/isaacvancemusic/" target="_blank"
+                        aria-label="Instagram Profile"><i class="fa fa-instagram fa-2x"></i></a></li>
+            </ul>
+        </div>
 
-            <a href="https://www.github.com/isaacvance1027/" id="githubText">
-                <button>GitHub</button>
-            </a>
-
-            <a href="./images/IsaacVanceResume.pdf" id="resumeText">
-                <button>Resume</button>
-            </a>
-        </section>
-
-
-        <section class="container" id="about">
+        <section class="container" id="about_skills">
             <h2>About:</h2>
 
             <p>
@@ -180,7 +176,7 @@
             <hr>
         </section>
 
-        <div id="waveform"></div>
+
     </main>
 
     <!-- JavaScript Bundle with Popper -->
