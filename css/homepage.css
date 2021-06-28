@@ -8,12 +8,16 @@ header {
     overflow: hidden;
 }
 
-#social {
-    text-align: center;
+
+#social-links {
+    float: right;
+    padding-right: 10px;
 }
 
-#searchBar {
-    float: inline-end;
+@media (max-width:990px) {
+    #social-links {
+        float: left;
+    }
 }
 
 #mainPhoto {
@@ -62,4 +66,6 @@ button {
 
 #social {
     display: 100px;
+    text-align: center;
+    color: black;
 }
