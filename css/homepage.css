@@ -8,15 +8,31 @@ header {
     overflow: hidden;
 }
 
-
 #social-links {
     float: right;
     padding-right: 10px;
 }
 
+#social {
+    color: white;
+    background-color: #292b2c; 
+    display: 100px;
+    text-align: center; 
+}
+
 @media (max-width:990px) {
     #social-links {
-        float: left;
+        display: none;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+    }
+    #social {
+        padding-top: 10px;
     }
 }
 
@@ -27,7 +43,7 @@ header {
 .blockquote-footer {
     text-align: right;
     color: white;
-} 
+}
 
 #searchButton {
     background: #0F78B8;
@@ -39,8 +55,7 @@ button:hover {
     border-radius: 4px;
     background-color: #0F78B8;
     color: white;
-    
-} 
+}
 
 button {
     background-color: white;
@@ -64,8 +79,3 @@ button {
     font-weight: bold;
 }
 
-#social {
-    display: 100px;
-    text-align: center;
-    color: black;
-}
