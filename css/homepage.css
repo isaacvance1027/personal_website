@@ -8,13 +8,16 @@ header {
     overflow: hidden;
 }
 
+a {
+    color: lightgray;
+}
+
 #social-links {
     float: right;
     padding-right: 10px;
 }
 
 #social {
-    color: white;
     background-color: #292b2c; 
     display: 100px;
     text-align: center; 
