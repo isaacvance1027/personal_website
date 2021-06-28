@@ -55,6 +55,7 @@ a {
 }
 
 #quotecontainer:hover {
+    color: white;
     cursor: pointer;
 }
 
