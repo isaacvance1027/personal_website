@@ -34,20 +34,32 @@ a {
     text-align: center;
 }
 
+#footer {
+    padding: 0px;
+}
 
 @media (max-width:990px) {
     #social-links {
         display: none;
     }
-    .footer {
+    #footer {
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
         height: 50px;
+        padding: 0px;
     }
     #social {
         padding-top: 10px;
+    }
+
+    #resumePadding {
+        padding-left: 10%;
+    }
+    
+    #resume {
+        float: left;
     }
 }
 
