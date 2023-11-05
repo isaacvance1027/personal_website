@@ -18,8 +18,8 @@
     <link id="theme-style-dark" rel="stylesheet" href="assets/dark-mode.css">
     <link id="theme-style" rel="stylesheet" href="assets/styles.css">
 
-
     <script src="https://use.fontawesome.com/eb4e85667e.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DB15PFTMC8"></script>
     <script>
@@ -30,7 +30,14 @@
 
         gtag('config', 'G-DB15PFTMC8');
     </script>
-    <title>Isaac Vance's Personal Website</title>
+
+
+   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <title>Isaac Vance</title>
+
+    <script src="./js/index.js" defer></script>
+
 </head>
 
 <body>
@@ -105,10 +112,24 @@
 
         <header class="header">
 
-            <div class="container" id="sub-image"></div>
-            <img class="profile-image" src="images/mainPhoto.jpg" alt="Isaac Vance - Portrait"
-                style="width:384px;height:476px;">
+            <div class="container hex-container">
 
+                <!--Sorry for the Voodoo...-->
+
+                <style id="hexagon-before">.hex:before{content:"";width:0;height:0;border-bottom:30px solid;border-color:inherit;border-left:52px solid transparent;border-right:52px solid transparent;position:absolute;top:-30px;right:0px;}</style>
+                <style id="hexagon-after">.hex:after{content:"";width:0;position:absolute;right:0px;bottom:-30px;border-top:30px solid;border-color:inherit;border-left: 52px solid transparent;border-right: 52px solid transparent;}</style>
+             
+                <span class="hex"></span>
+                <span class="hex"></span>
+                <span class="hex"></span>
+                <span class="hex"></span>
+                <span class="hex"></span>
+
+                <img class="profile-image img-fluid" src="images/CO1A0122-ed_copy-sm-removebg-preview.png" alt="Isaac Vance - Portrait">
+    
+            </div>
+
+        
             <a href="https://en.wikipedia.org/wiki/Alan_Watts">
                 <div class="container" id="quotecontainer">
 
@@ -123,11 +144,10 @@
                     <button id="resume" name="resume">Resume</button>
                 </a>
             </div>
-            </div>
-
+        
         </header>
 
-        <div class="col-md-8 col-sm-12 col-xs-12">
+        <!-- <div class="col-md-8 col-sm-12 col-xs-12"> -->
             <section class="container" id="about_skills">
                 <div class="card">
                     <h2>About:</h2>
@@ -226,7 +246,7 @@
                 </div>
                 <hr>
             </section>
-        </div>
+        <!-- </div> -->
 
         <div class="secondary col-lg-4 col-md-8 col-sm-12 col-xs-12">
             <aside class="info aside section">
@@ -358,7 +378,7 @@
         </div>
 
 
-        <footer class="col-md-12 col-sm-12 col-xs-12" id="footer">
+        <footer class="col-md-12 col-sm-12 col-xs-12 fixed-bottom" id="footer">
             <div class="jumbotron jumbotron-fluid" id="social">
                 <ul class="social list-inline">
                     <li><a href="https://www.linkedin.com/in/isaac-vance" target="_blank"
