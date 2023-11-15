@@ -61,10 +61,6 @@ p {
     #resumePadding {
         padding-left: 10%;
     }
-    
-    #resume {
-        float: left;
-    }
 }
 
 #mainPhoto {
@@ -93,7 +89,7 @@ button:hover {
     color: white;
 }
 
-button {
+/* button {
     color: black;
     background-color: white;
     text-decoration-color: #0F78B8;
@@ -105,7 +101,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
+} */
 
 .content {
     display: block;
@@ -118,14 +114,12 @@ button {
 
 .header {
     background-color: #343a40;
-    transform: translateX(-100%); /* Off-screen initially */
     filter: blur(20px);
-    transition: all 1s ease-in-out; /* Animation duration and easing */
+    transition: all 0.5s ease-in-out; /* Animation duration and easing */
 }
 
 .header.active {
     filter: blur(0px);
-    transform: translateX(0); /* Display the header by translating it back to its original position */
 }
 
 /* Clever header trick from some dude named Keith J. Grant  */
@@ -149,7 +143,7 @@ button {
     background-image: linear-gradient(
         #fff, #343a40
     );
-    z-index: -1;
+    z-index: -3;
     transition: opacity 0.5s linear;
     opacity: 0;
 }
@@ -159,13 +153,17 @@ button {
 }
 
 .hex {
-    margin-top: 30px;
-    width: 104px;
-    height: 60px;
     background-color: #343a40;
     border-color: #343a40;
     position: relative;
     display: inline-block;
-    z-index: -1;
+    z-index: 4;
+    transition: 0.1s ease-in;
+    margin-top: 3rem;
 }
 
+.hex:hover {
+    background-color: #0080ff;
+    transform: translateY(50%);
+    cursor: pointer;
+}
