@@ -23,7 +23,7 @@ const resume = document.getElementById('resume');
 
 resume.addEventListener("click", function() {
     // Change the window.location.href to the desired URL
-    window.location.href = "./images/IsaacVanceResume.pdf";
+    window.location.href = "./images/Isaac Vance's Resume.pdf";
 });
 
 function resizeHexagons() {
@@ -44,8 +44,29 @@ function resizeHexagons() {
             hexagon.style.width = `${hexagonWidth}px`;
             hexagon.style.height = `${hexagonHeight}px`;
 
-            let hexagonBeforeStyling = `.hex:before{content:"";width:0;height:0;border-bottom:${Math.floor(hexagonWidth * 0.3)}px solid;border-color:inherit;border-left:${Math.floor(hexagonWidth * 0.5)}px solid transparent;border-right:${Math.floor(hexagonWidth * 0.5)}px solid transparent;position:absolute;top:-${Math.floor(hexagonWidth * 0.3)}px;right:0;}`;
-            let hexagonAfterStyling = `.hex:after{content:"";width:0;position:absolute;right:0;bottom:-${Math.floor(hexagonWidth * 0.3)}px;border-top:${Math.floor(hexagonWidth * 0.3)}px solid;border-color:inherit;border-left:${Math.floor(hexagonWidth * 0.5)}px solid transparent;border-right:${Math.floor(hexagonWidth * 0.5)}px solid transparent;}`;
+            let hexagonBeforeStyling = 
+            `.hex:before {
+                content:"";
+                width:0;
+                height:0;
+                border-bottom:${Math.floor(hexagonWidth * 0.3)}px solid;
+                border-color:inherit;
+                border-left:${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+                border-right:${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+                position:absolute;top:-${Math.floor(hexagonWidth * 0.3)}px;
+                right:0;
+            }`;
+
+            let hexagonAfterStyling = 
+            `.hex:after {
+                content:"";
+                width:0;
+                position:absolute;
+                right:0;bottom:-${Math.floor(hexagonWidth * 0.3)}px;
+                border-top:${Math.floor(hexagonWidth * 0.3)}px solid;
+                border-color:inherit;border-left:${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+                border-right:${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+            }`;
 
             hexagonBeforeStyle.innerHTML = hexagonBeforeStyling;
             hexagonAfterStyle.innerHTML = hexagonAfterStyling;
@@ -64,8 +85,32 @@ function resizeHexagons() {
             hexagon.style.width = hexagonWidth;
             hexagon.style.height = hexagonHeight;
             
-            hexagonBeforeStyle.innerHTML =  `.hex:before{content:"";width:0;height:0;border-bottom:${widthCalc * 0.3}px solid;border-color:inherit;border-left:${widthCalc * 0.5}px solid transparent;border-right:${widthCalc * 0.5}px solid transparent;position:absolute;top:-${widthCalc * 0.3}px;right:0;}`;
-            hexagonAfterStyle.innerHTML = `.hex:after{content:"";width:0;position:absolute;right:0;bottom:-${widthCalc * 0.3}px;border-top:${widthCalc * 0.3}px solid;border-color:inherit;border-left:${widthCalc * 0.5}px solid transparent;border-right:${widthCalc * 0.5}px solid transparent;}`;
+            hexagonBeforeStyle.innerHTML =  
+            `.hex:before {
+                content:"";
+                width:0;
+                height:0;
+                border-bottom:${widthCalc * 0.3}px solid;
+                border-color:inherit;
+                border-left:${widthCalc * 0.5}px solid transparent;
+                border-right:${widthCalc * 0.5}px solid transparent;
+                position:absolute;
+                top:-${widthCalc * 0.3}px;
+                right:0;
+            }`;
+
+            hexagonAfterStyle.innerHTML = 
+            `.hex:after {
+                content:"";
+                width:0;
+                position:absolute;
+                right:0;
+                bottom:-${widthCalc * 0.3}px;
+                border-top:${widthCalc * 0.3}px solid;
+                border-color:inherit;
+                border-left:${widthCalc * 0.5}px solid transparent;
+                border-right:${widthCalc * 0.5}px solid transparent;
+            }`;
             
         };
 
