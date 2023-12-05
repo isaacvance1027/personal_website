@@ -32,7 +32,12 @@
     </script>
 
 
-   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <!--Google Fonts from Bryan-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 
     <title>Isaac Vance</title>
 
@@ -62,16 +67,7 @@
                             Projects
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item"
-                                href="https://github.com/isaacvance1027/Multi_Threading_Practice/tree/master/PA3">Multi-Threaded
-                                C Practice</a>
-                            <a class="dropdown-item" href="https://github.com/Stefpv/battleship">Java Battlship Video
-                                Game</a>
-                            <a class="dropdown-item" href="https://github.com/isaacvance1027/personal_website">This
-                                Website's Repo</a>
-                            <a class="dropdown-item" href="https://icyvance.com/assignment7.html">ATLS assignment 7</a>
-                            <a class="dropdown-item" href="https://icyvance.com/assignment10.html">ATLS assignment 10</a>
-                            <a class="dropdown-item" href="https://icyvance.com/assignment10.html">ATLS assignment 10</a>
+            
                             <!-- <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://github.com/isaacvance1027/personal_website"></a> -->
                         </div>
@@ -112,7 +108,7 @@
 
         <header class="header gradient">
 
-            <div class="container hex-container">
+            <div class="container-fluid">
 
                 <!--
                     Sorry for the Voodoo...
@@ -122,54 +118,66 @@
                     need to be defined because CSS is dumb like that
                 -->
 
-                <style id="hexagon-before">
-                    .hex:before {
-                        content:"";
-                        width:0;
-                        height:0;
-                        border-bottom:30px solid;
-                        border-color:inherit;
-                        border-left:52px solid transparent;
-                        border-right:52px solid transparent;
-                        position:absolute;
-                        top:-30px;right:0px;
-                    }
-                </style>
-
-                <style id="hexagon-after">
-                    .hex:after {
-                        content:"";
-                        width:0;
-                        position:absolute;
-                        right:0px;
-                        bottom:-30px;
-                        border-top:30px solid;
-                        border-color:inherit;
-                        border-left: 52px solid transparent;
-                        border-right: 52px solid transparent;
-                    }
-                </style>
+                <style id="hexagon-before"></style>
+                <style id="hexagon-after"></style>
 
                 <style id="hexagon-before-hover"></style>
                 <style id="hexagon-after-hover"></style>
 
-                <div class="container">
+                <div class="menu container-fluid">
                              
                     <div id="resume" class="hex">
-                       <div class="d-flex justify-content-center align-items-center">
-                            Resume
+                       <div class="d-flex justify-content-center align-items-center h-100">
+                            Résumé
                         </div>
-                    </div>                      
+                    </div>  
+
                     <div class="hex">
-                        <div class="d-flex justify-content-center align-items-center">
-                            About Me
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            Bio
                         </div>
-                    </div>                      
-                    <div class="hex">
-                        <div class="d-flex justify-content-center align-items-center">
+                    </div>   
+                         
+                    <!--Anchors will pile out on hover-->
+                    <div class="hex projects">
+                        <div class="d-flex justify-content-center align-items-center h-100">
                             Projects
                         </div>
-                    </div>                      
+                        <div class="hex project">
+                            <a href="https://github.com/isaacvance1027/Multi_Threading_Practice/tree/master/PA3" 
+                            class="d-flex justify-content-center align-items-center h-100">
+                                1
+                            </a>
+                        </div>      
+    
+                        <div class="hex project">
+                            <a href="https://github.com/Stefpv/battleship"
+                            class="d-flex justify-content-center align-items-center h-100">
+                                2
+                            </a>
+                        </div>      
+    
+                        <div class="hex project">
+                            <a href="https://github.com/isaacvance1027/personal_website"
+                            class="d-flex justify-content-center align-items-center h-100">
+                                3
+                            </a>
+                        </div>      
+                        <div class="hex project">
+                            <a href="https://icyvance.com/assignment7.html"
+                            class="d-flex justify-content-center align-items-center h-100">
+                                4
+                            </a>
+                        </div>      
+                        <div class="hex project">
+                            <a href="https://icyvance.com/assignment10.html"
+                            class="d-flex justify-content-center align-items-center h-100">
+                                5
+                            </a>
+                        </div>    
+                    </div>
+                      
+                   
                         
                     <img class="img-fluid" src="images/CO1A0122-ed_copy-sm-removebg-preview.png" alt="Isaac Vance - Portrait">
 
