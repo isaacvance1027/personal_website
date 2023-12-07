@@ -12,6 +12,7 @@ header {
 a {
     color: lightgray !important;
     transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
 }
 
 .fa:hover {
@@ -169,28 +170,30 @@ button:hover {
     position: relative;
     display: inline-block;
     transition: 0.1s ease-in;
-    margin-top: 3rem;
+    box-sizing: border-box;
 }
 
-.hex:hover {    
+.hex :not(#h1):not(#h2):not(#h3):not(#h4):not(#h5):hover {    
     color: #343a40;
     background-color: white;
     cursor: pointer;
 }
 
-.hex.projects {
+.projects {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
     display: inline-block;
     transition: 0.1s ease-in;
-    margin-top: 3rem;
+}
+
+.projects:hover{
+    background-color: white;
+    color:#343a40
 }
 
 .hex.project {
+    color:#343a40;
     position: absolute !important;
-    margin-top: 3rem;
 }
 
-.projects.hex:hover {
-    background-color: white;
-}
+

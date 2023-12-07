@@ -28,15 +28,15 @@ const numProjects = projects.length;
 projects.forEach((project, i) => {
     // Set the position and zIndex of each project in descending order
     project.style.zIndex = ((numProjects - 1 - i) * 5).toString();
+    project.addEventListener("click", () => {
+        window.location.href = project.dataset.url;
+    })
 });
 
 // Control Project Tab Extending Downward
 projectsTab.addEventListener('mouseover', () => {
     projects.forEach((project, i) => {
         project.style.transform = `translateX(${(i * -103)}%)`;
-        let color = `rgb(${Math.floor(Math.random()* 256)}, 0, 0)`;
-        project.style.backgroundColor = color;
-        project.style.borderColor = color;
     });
 });
 
@@ -48,7 +48,8 @@ projectsTab.addEventListener('mouseout', () => {
 
 // Select Resume div and reload 
 const resume = document.getElementById('resume');
-resume.addEventListener("click", function() {
+
+resume.addEventListener("click", () => {
     // Change the window.location.href to the desired URL
     window.location.href = "./images/Isaac Vance's Resume.pdf";
 });
@@ -62,21 +63,33 @@ function resizeHexagons() {
     const baseParameter = width / 12.3;
 
     hexagons.forEach(hexagon => {
-        let hexagonWidth, hexagonHeight;
+
+        // I can't be bothered lol
+        hexagon.classList.add('shadow-lg');
+
+        let hexagonWidth, hexagonHeight, marginTop, textSize;
 
         if (width < 1280 && width > 750) {
             hexagonWidth = Math.floor(baseParameter);
             hexagonHeight = Math.floor(hexagonWidth * 0.7);
+            marginTop = 3.25;
+            textSize = 1.5;
         } else if (width < 750) {
             hexagonWidth = 61;
             hexagonHeight = 42;
+            marginTop = 2.25;
+            textSize = 1.25;
         } else if (width > 1280) {
             hexagonWidth = 104;
             hexagonHeight = 72;
+            marginTop = 4;
+            textSize = 2;
         }
 
         hexagon.style.width = `${hexagonWidth}px`;
         hexagon.style.height = `${hexagonHeight}px`;
+        hexagon.style.marginTop = `${marginTop}rem`;
+        hexagon.style.fontSize = `${textSize}rem`;
 
         const beforePseudoElementStyle = `
             content: "";
