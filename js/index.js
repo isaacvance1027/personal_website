@@ -166,12 +166,13 @@ const bio = document.getElementById('bio');
 
 function scrollToBio() {
 
+    // Scrolling Edits since scrollIntoView method is terrible
+
     const target = document.getElementById('about_skills');
+    const yOffset = -40;
+    const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
 
-    target.classList.add('active');
-
-    target.scrollIntoView({ behavior : "smooth" });
-
+    window.scrollTo({ top : y, behavior : 'smooth'});
 };
 
 bio.addEventListener('click', scrollToBio);
