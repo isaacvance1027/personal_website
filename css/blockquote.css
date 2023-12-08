@@ -7,10 +7,6 @@ blockquote.q-card-color-1{
     --text-color-author: rgb(180, 144, 144);
 }
 
-blockquote:hover {
-    cursor: pointer;
-}
-
 blockquote.q-card {
     --padding: 1rem;
     padding: var(--padding);
@@ -57,5 +53,9 @@ blockquote.q-card > .author {
 
 blockquote.q-card > .author::before{
     content: "- "
+}
+
+#alanQuote {
+    cursor: pointer;
 }
 

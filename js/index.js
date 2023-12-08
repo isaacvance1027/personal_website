@@ -58,14 +58,17 @@ projects.forEach((project, i) => {
 
 // Control Project Tab Extending Downward
 projectsTab.addEventListener('mouseover', () => {
+    // Make project tabs be white, but add event listeners for hover
     projects.forEach((project, i) => {
         project.style.transform = `translateX(${(i * -103)}%)`;
+        project.style.color = 'white';
     });
 });
 
 projectsTab.addEventListener('mouseout', () => {
     projects.forEach((project, i) => {
         project.style.transform = `translateY(0)`;
+        project.style.color = '#343a40';
     });
 });
 
@@ -118,12 +121,12 @@ function resizeHexagons() {
             content: "";
             width: 0;
             height: 0;
-            border-bottom: ${Math.floor(hexagonWidth * 0.3)}px solid;
+            border-bottom: ${Math.ceil(hexagonWidth * 0.3)}px solid;
             border-color: inherit;
-            border-left: ${Math.floor(hexagonWidth * 0.5)}px solid transparent;
-            border-right: ${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+            border-left: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
+            border-right: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
             position: absolute;
-            top: -${Math.floor(hexagonWidth * 0.3)}px;
+            top: -${Math.ceil(hexagonWidth * 0.3)}px;
             right: 0;
         `;
 
@@ -132,11 +135,11 @@ function resizeHexagons() {
             width: 0;
             position: absolute;
             right: 0;
-            bottom: -${Math.floor(hexagonWidth * 0.3)}px;
-            border-top: ${Math.floor(hexagonWidth * 0.3)}px solid;
+            bottom: -${Math.ceil(hexagonWidth * 0.3)}px;
+            border-top: ${Math.ceil(hexagonWidth * 0.3)}px solid;
             border-color: inherit;
-            border-left: ${Math.floor(hexagonWidth * 0.5)}px solid transparent;
-            border-right: ${Math.floor(hexagonWidth * 0.5)}px solid transparent;
+            border-left: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
+            border-right: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
         `;
 
         hexagonBeforeStyle.innerHTML = `.hex::before { ${beforePseudoElementStyle} }`;
@@ -183,3 +186,18 @@ const alanQuote = document.getElementById('alanQuote');
 alanQuote.addEventListener('click', () => {
     window.location.href = alanQuote.dataset.url;
 });
+
+// Audio Stuff
+const audioCaption = document.getElementById('audio-caption');
+const playAudio = document.getElementById('play-audio');
+const musicSection = document.getElementById('music');
+
+playAudio.addEventListener('play', () => {
+    audioCaption.innerHTML = 'Playing Move Too Fast';
+
+    musicSection.scrollIntoView({ behavior: 'smooth'});
+})
+
+playAudio.addEventListener('pause', () => {
+    audioCaption.innerHTML = 'Click for 🎵'
+})

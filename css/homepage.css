@@ -47,6 +47,8 @@ p {
 
 #footer {
     padding: 0px;
+    margin-bottom: 0 !important;
+    height: 100px;
 }
 
 @media (max-width:990px) {
@@ -70,6 +72,11 @@ p {
 
     #resumePadding {
         padding-left: 10%;
+    }
+
+    #floating-audio {
+        transform: scale(0.75);
+        margin-bottom: 5rem;
     }
 }
 
@@ -100,20 +107,6 @@ button:hover {
     background-color: #0F78B8;
     color: white;
 }
-
-/* button {
-    color: black;
-    background-color: white;
-    text-decoration-color: #0F78B8;
-    border: 2px solid #0F78B8;
-    border-radius: 4px;
-    overflow: hidden;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-} */
 
 .content {
     display: block;
@@ -200,10 +193,6 @@ button:hover {
     position: absolute !important;
 }
 
-.projects:hover + .project {
-    color: white;
-}
-
 section {
     opacity: 0;
     transform: translateX(-100%);
@@ -214,3 +203,26 @@ section.show {
     opacity: 1;
     transform: translateX(0);
 }
+
+.project:hover {
+    color: #343a40 !important;
+}
+
+/* Floating audio parent div style */ 
+#floating-audio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5000; /* Ensure it's above other content */
+}
+
+/* Fig Caption for audio */
+#audio-caption {
+    mix-blend-mode: multiply;
+    color: #343a40;
+}
+
