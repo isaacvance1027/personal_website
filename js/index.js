@@ -77,7 +77,7 @@ const resume = document.getElementById('resume');
 
 resume.addEventListener("click", () => {
     // Change the window.location.href to the desired URL
-    window.location.href = "./images/Isaac Vance's Resume.pdf";
+    window.location.href = "./images/Isaac Vance's resume.pdf";
 });
 
 // Is this too much voodoo lmao; DOM manip is too damn wordy
