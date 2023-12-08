@@ -15,9 +15,12 @@
 
     <link rel="stylesheet" href="css/homepage.css">
 
+    <!--Complex Blockquote styling needs own fi;e-->
+    <link rel="stylesheet" href="css/blockquote.css">
+    
     <link id="theme-style-dark" rel="stylesheet" href="assets/dark-mode.css">
     <link id="theme-style" rel="stylesheet" href="assets/styles.css">
-
+    
     <script src="https://use.fontawesome.com/eb4e85667e.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -49,31 +52,36 @@
     <main>
 
         <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="./index.html">Isaac Christopher Vance</a>
+            <div class="navbar-brand">Isaac Christopher Vance</div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <ul class="navbar-nav" id="links">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Projects
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            
+                            <a class="dropdown-item"
+                                href="https://github.com/isaacvance1027/Multi_Threading_Practice/tree/master/PA3">Multi-Threaded
+                                C Practice</a>
+                            <a class="dropdown-item" href="https://github.com/Stefpv/battleship">Java Battleship Video
+                                Game</a>
+                            <a class="dropdown-item" href="https://github.com/isaacvance1027/personal_website">This
+                                Website's Repo</a>
+                            <a class="dropdown-item" href="https://icyvance.com/assignment7.html">ATLS assignment 7</a>
+                            <a class="dropdown-item" href="https://icyvance.com/assignment10.html">ATLS assignment 10</a>
+                            <a class="dropdown-item" href="https://icyvance.com/assignment10.html">ATLS assignment 10</a>
                             <!-- <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://github.com/isaacvance1027/personal_website"></a> -->
                         </div>
                     </li>
                 </ul>
-
                 <ul class="navbar-nav ml-auto" id="social-links">
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/isaac-vance" target="_blank"
@@ -132,7 +140,7 @@
                         </div>
                     </div>  
 
-                    <div class="hex">
+                    <div class="hex" id="bio">
                         <div class="d-flex justify-content-center align-items-center h-100">
                             Bio
                         </div>
@@ -180,26 +188,17 @@
                
             </div>
 
-            <a href="https://en.wikipedia.org/wiki/Alan_Watts">
-                <div class="container" id="quotecontainer">
-
-                    <p>The only way to make sense out of change is to plunge into it, move with it, and join the dance.
-                    </p>
-                    <footer class="blockquote-footer">Alan Watts</footer>
-                </div>
-            </a>
-
-            <div id="resumePadding">
-                <a href="./images/Isaac Vance's resume.pdf" id=" resumeText">
-                    <button id="resume" name="resume">Resume</button>
-                </a>
-            </div>
-        
         </header>
 
-        <!-- <div class="col-md-8 col-sm-12 col-xs-12"> -->
             <section class="container" id="about_skills">
+
                 <div class="card">
+
+                    <blockquote class="q-card q-card-color-1" id="alanQuote" data-url="https://en.wikipedia.org/wiki/Alan_Watts">
+                        <div class="content">The only way to make sense out of change is to plunge into it, move with it, and join the dance.</div>                        
+                        <div class='author'>Alan Watts</div>
+                    </blockquote>
+
                     <h2>About:</h2>
 
                     <p>
@@ -251,22 +250,141 @@
                 <hr>
             </section>
 
-            <section class="container" id="skills">
-                <div class="card">
-                    <h2>Skills:</h2>
-                    <ul>
-                        <li>Software Developer</li>
-                        <li>Mathematician and Statistician</li>
-                        <li>Musician and Recording Producer</li>
-                        <li>Sailing Instructor and Racing Coach</li>
-                        <li>Rock Climber and Mountaineer</li>
-                        <li>Table Games Enthusist</li>
-                        <li>Aquascaper and Aquarist</li>
-                        <li>Billiards and Table Tennis Champion</li>
-                    </ul>
+            <div class="container">
+                <div class="row">
+                    <section class="container col-lg-6 col-xs-12 col-sm-12 col-md-12" id="skills">
+                        <div class="card">
+                            <h2>Skills:</h2>
+                            <ul>
+                                <li>Software Developer</li>
+                                <li>Mathematician and Statistician</li>
+                                <li>Musician and Recording Producer</li>
+                                <li>Sailing Instructor and Racing Coach</li>
+                                <li>Rock Climber and Mountaineer</li>
+                                <li>Table Games Enthusist</li>
+                                <li>Aquascaper and Aquarist</li>
+                                <li>Billiards and Table Tennis Champion</li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </section>
+        
+                    <section class="skills section col-lg-6 col-xs-12 col-sm-12 col-md-12">
+                        <div class="section-inner">
+                            <h2 class="heading">Developer Skills</h2>
+                            <div class="content">
+                                <p class="intro">
+                                    I’ve been working as software engineer for over <b>5</b> years. Initially I started with an
+                                    embedded hardware understanding of machines and later moved to web based payments driven API solutions.
+                                </p>
+                                <!-- <p><i class="fa fa-hand-o-up"></i> <u>Tap on the <b>skill level</b></u> to get more details.</p> -->
+        
+                                <div class="skillset">
+        
+                                    <div class="item">
+                                        <h3 class="level-title">Ruby on Rails<span class="level-label"
+                                                data-toggle="tooltip" data-placement="left" data-animation="true" title=""
+                                                data-original-title="Native android development for different form factors. Familiar with material design, data binding, android support-lib and popular 3rd party library like Dagger, Retrofit, Picasso, OkHttp and so on."><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Pro</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="71%" style="width: 71%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">Golang<span class="level-label"
+                                                data-toggle="tooltip" data-placement="left" data-animation="true" title=""
+                                                data-original-title="Actively used well established android architectures like MVVM, MVP in recent projects"><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="65%" style="width: 65%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">JavaScript<span class="level-label" data-toggle="tooltip"
+                                                data-placement="left" data-animation="true" title=""
+                                                data-original-title="Actively trying to learn different Jetpack components. Recently worked with AppCompat, Android KTX, Multidex, Test, Data Binding, Lifecycles,
+                                                Paging, ViewModel, Media &amp; playback, Notifications, Permissions, Preferences, Animation &amp; transitions, Layout, Navigation, TV"><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Intermediate</span>
+                                        </h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="45%" style="width: 45%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">React<span class="level-label" data-toggle="tooltip"
+                                                data-placement="left" data-animation="true" title=""
+                                                data-original-title="8+ years of experience using Java in Android. However, last 3+ years have been Kotlin only."><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="68%" style="width: 68%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">Python<span class="level-label" data-toggle="tooltip"
+                                                data-placement="left" data-animation="true" title=""
+                                                data-original-title="Started working on kotlin since it's official support announced at Google I/O 2017"><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="54%" style="width: 54%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">Tools/IDE<span class="level-label" data-toggle="tooltip"
+                                                data-placement="left" data-animation="true" title=""
+                                                data-original-title="Proficient in Android Studio, Github, Fork, Debugger, Postman, Charles and so on."><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Pro</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="75%" style="width: 75%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                    <div class="item">
+                                        <h3 class="level-title">Agile<span class="level-label" data-toggle="tooltip"
+                                                data-placement="left" data-animation="true" title=""
+                                                data-original-title="I have experience over working with Jenkins Piplelines, Github Actions, Circle CI, Travis CI, Microsoft AppCenter."><i
+                                                    class="fa fa-info-circle" aria-hidden="true"></i> Intermediate</span></h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="34%" style="width: 34%;">
+                                            </div>
+                                        </div>
+                                        <!--//level-bar-->
+                                    </div>
+                                    <!--//item-->
+        
+                                </div>
+                            </div>
+                            <!--//content-->
+                        </div>
+                        <!--//section-inner-->
+                    </section>
+                    <!--//section-->
                 </div>
-                <hr>
-            </section>
+
+            </div>
+        
 
             <section class="container" id="music">
                 <div class="card">
@@ -293,122 +411,6 @@
                 <hr>
             </section>
         <!-- </div> -->
-
-        <div class="secondary col-lg-4 col-md-8 col-sm-12 col-xs-12">
-            <aside class="skills aside section">
-                <div class="section-inner">
-                    <h2 class="heading">Skills</h2>
-                    <div class="content">
-                        <p class="intro">
-                            I’ve been working as software engineer for over <b>5</b> years. Initially I started with an
-                            embedded hardware understanding of machines and later moved to web based payments driven API solutions.
-                        </p>
-                        <!-- <p><i class="fa fa-hand-o-up"></i> <u>Tap on the <b>skill level</b></u> to get more details.</p> -->
-
-                        <div class="skillset">
-
-                            <div class="item">
-                                <h3 class="level-title">Ruby on Rails<span class="level-label"
-                                        data-toggle="tooltip" data-placement="left" data-animation="true" title=""
-                                        data-original-title="Native android development for different form factors. Familiar with material design, data binding, android support-lib and popular 3rd party library like Dagger, Retrofit, Picasso, OkHttp and so on."><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Pro</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="71%" style="width: 71%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">Golang<span class="level-label"
-                                        data-toggle="tooltip" data-placement="left" data-animation="true" title=""
-                                        data-original-title="Actively used well established android architectures like MVVM, MVP in recent projects"><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="65%" style="width: 65%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">JavaScript<span class="level-label" data-toggle="tooltip"
-                                        data-placement="left" data-animation="true" title=""
-                                        data-original-title="Actively trying to learn different Jetpack components. Recently worked with AppCompat, Android KTX, Multidex, Test, Data Binding, Lifecycles,
-                                        Paging, ViewModel, Media &amp; playback, Notifications, Permissions, Preferences, Animation &amp; transitions, Layout, Navigation, TV"><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Intermediate</span>
-                                </h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="45%" style="width: 45%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">React<span class="level-label" data-toggle="tooltip"
-                                        data-placement="left" data-animation="true" title=""
-                                        data-original-title="8+ years of experience using Java in Android. However, last 3+ years have been Kotlin only."><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="68%" style="width: 68%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">Python<span class="level-label" data-toggle="tooltip"
-                                        data-placement="left" data-animation="true" title=""
-                                        data-original-title="Started working on kotlin since it's official support announced at Google I/O 2017"><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Semi-Pro</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="54%" style="width: 54%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">Tools/IDE<span class="level-label" data-toggle="tooltip"
-                                        data-placement="left" data-animation="true" title=""
-                                        data-original-title="Proficient in Android Studio, Github, Fork, Debugger, Postman, Charles and so on."><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Pro</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="75%" style="width: 75%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">Agile<span class="level-label" data-toggle="tooltip"
-                                        data-placement="left" data-animation="true" title=""
-                                        data-original-title="I have experience over working with Jenkins Piplelines, Github Actions, Circle CI, Travis CI, Microsoft AppCenter."><i
-                                            class="fa fa-info-circle" aria-hidden="true"></i> Intermediate</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="34%" style="width: 34%;">
-                                    </div>
-                                </div>
-                                <!--//level-bar-->
-                            </div>
-                            <!--//item-->
-
-                        </div>
-                    </div>
-                    <!--//content-->
-                </div>
-                <!--//section-inner-->
-            </aside>
-            <!--//section-->
-        </div>
-
 
         <footer class="col-md-12 col-sm-12 col-xs-12 fixed-bottom" id="footer">
             <div class="jumbotron jumbotron-fluid" id="social">

@@ -6,6 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add("active");
     }, 50);
 
+    // Get all sections below header
+    const sections = document.querySelectorAll("section");
+
+    
+    // Check if the section top of each section is within half of the window
+    function checkScroll() {
+        sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+            if (sectionTop < windowHeight / 2) {
+                section.classList.add("show");
+            } else {
+                section.classList.remove("show");
+            }
+        });
+    };
+
+     // Initial check when the page loads
+    checkScroll();
+
+    // Check when scrolling
+    window.addEventListener("scroll", checkScroll);
 });
 
 // Select elements outside the event handler
@@ -129,11 +152,33 @@ function resizeHexagons() {
             'border-color: white' // Change this color to your desired color for ::after on hover
         );
 
-        hexagonBeforeHoverStyle.innerHTML = `.hex:hover::before { ${hoverBeforePseudoElementStyle} }`;
-        hexagonAfterHoverStyle.innerHTML = `.hex:hover::after { ${hoverAfterPseudoElementStyle} }`;
+        hexagonBeforeHoverStyle.innerHTML = `.hex:hover:before { ${hoverBeforePseudoElementStyle} }`;
+        hexagonAfterHoverStyle.innerHTML = `.hex:hover:after { ${hoverAfterPseudoElementStyle} }`;
     });
 }
 
 // Call the function initially and on window resize
 resizeHexagons();
 window.addEventListener('resize', resizeHexagons);
+
+// Functionality for Bio Button Scrolling
+const bio = document.getElementById('bio');
+
+function scrollToBio() {
+
+    const target = document.getElementById('about_skills');
+
+    target.classList.add('active');
+
+    target.scrollIntoView({ behavior : "smooth" });
+
+};
+
+bio.addEventListener('click', scrollToBio);
+
+// Blockquote redirect 
+const alanQuote = document.getElementById('alanQuote');
+
+alanQuote.addEventListener('click', () => {
+    window.location.href = alanQuote.dataset.url;
+});

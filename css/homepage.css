@@ -9,7 +9,7 @@ header {
     overflow: hidden;
 }
 
-a {
+a .fa {
     color: lightgray !important;
     transition: all 0.3s ease-in-out;
     text-decoration: none !important;
@@ -173,7 +173,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-.hex :not(#h1):not(#h2):not(#h3):not(#h4):not(#h5):hover {    
+.hex:hover {    
     color: #343a40;
     background-color: white;
     cursor: pointer;
@@ -196,4 +196,17 @@ button:hover {
     position: absolute !important;
 }
 
+.projects:hover + .project {
+    color: white;
+}
 
+section {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+  
+section.show {
+    opacity: 1;
+    transform: translateX(0);
+}
