@@ -73,8 +73,10 @@ p {
     }
 }
 
-#mainPhoto {
-    padding-top: 0px;
+#main-photo {
+    border-style: none;
+    padding-top: 5rem;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.7) inset; /* Adjust the shadow values as needed */
 }
 
 #quotecontainer:hover {
@@ -126,6 +128,8 @@ button:hover {
     background-color: #343a40;
     filter: blur(20px);
     transition: all 0.5s ease-in-out; /* Animation duration and easing */
+    height: 100vh;
+    padding-top: 10rem;
 }
 
 .header.active {
