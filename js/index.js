@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get all sections below header
     const sections = document.querySelectorAll("section");
 
-    
     // Check if the section top of each section is within half of the window
     function checkScroll() {
         sections.forEach(section => {
@@ -58,9 +57,24 @@ projects.forEach((project, i) => {
 
 // Control Project Tab Extending Downward
 projectsTab.addEventListener('mouseover', () => {
+    const width = window.innerWidth;
     // Make project tabs be white, but add event listeners for hover
     projects.forEach((project, i) => {
-        project.style.transform = `translateX(${(i * -103)}%)`;
+        if (width <= 750) {
+            project.style.transform = `translateX(${(i * -105)}%)`;
+        } else if (width < 1280 && width > 750) {
+            project.style.transform = `translateX(${(i * -104)}%)`;
+        } else if (width >= 1280) {
+            project.style.transform = `translateX(${(i * -103)}%)`;
+        } 
+
+    const hex5 = document.getElementById('h5');
+
+        // Need special case for leftmost hexagon
+        if (width < 940 && width > 750) {
+            hex5.style.transform = `translate(-52%, 144%)`
+        }
+
         project.style.color = 'white';
     });
 });
@@ -86,7 +100,7 @@ function resizeHexagons() {
     const width = window.innerWidth;
 
     // Define a shared parameter for hexagon styling calculations
-    const baseParameter = width / 12.3;
+    const baseParameter = width / 12;
 
     hexagons.forEach(hexagon => {
 
@@ -96,19 +110,30 @@ function resizeHexagons() {
         let hexagonWidth, hexagonHeight, marginTop, textSize;
 
         if (width < 1280 && width > 750) {
+
             hexagonWidth = Math.floor(baseParameter);
             hexagonHeight = Math.floor(hexagonWidth * 0.7);
-            marginTop = 3.25;
-            textSize = 1.5;
-        } else if (width < 750) {
-            hexagonWidth = 61;
+              
+            // Linear interpolation between upper and lower limits needed for seemless resize
+            // lerp(a,b,t) = a + t(b - a)
+            // Calculate interpolation factor 't'
+            const t = (width - 750) / (1280 - 750);
+
+            // Use linear interpolation to calculate marginTop
+            marginTop = 2.25 + t * (3.5 - 2.25);
+
+            //Use same linear interpolation for text size            
+            textSize = 1.25 + t * (2 - 1.25); 
+
+        } else if (width <= 750) {
+            hexagonWidth = 62;
             hexagonHeight = 42;
             marginTop = 2.25;
             textSize = 1.25;
-        } else if (width > 1280) {
+        } else if (width >= 1280) {
             hexagonWidth = 104;
             hexagonHeight = 72;
-            marginTop = 4;
+            marginTop = 3.5;
             textSize = 2;
         }
 
@@ -126,7 +151,7 @@ function resizeHexagons() {
             border-left: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
             border-right: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
             position: absolute;
-            top: -${Math.ceil(hexagonWidth * 0.3)}px;
+            top: -${Math.ceil(hexagonWidth * 0.3) - 1}px;
             right: 0;
         `;
 
@@ -135,7 +160,7 @@ function resizeHexagons() {
             width: 0;
             position: absolute;
             right: 0;
-            bottom: -${Math.ceil(hexagonWidth * 0.3)}px;
+            bottom: -${Math.ceil(hexagonWidth * 0.3) - 1}px;
             border-top: ${Math.ceil(hexagonWidth * 0.3)}px solid;
             border-color: inherit;
             border-left: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;

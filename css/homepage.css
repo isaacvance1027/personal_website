@@ -76,7 +76,8 @@ p {
 
     #floating-audio {
         transform: scale(0.75);
-        margin-bottom: 5rem;
+        margin-right: -4rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -121,7 +122,6 @@ button:hover {
     background-color: #343a40;
     filter: blur(20px);
     transition: all 0.5s ease-in-out; /* Animation duration and easing */
-    height: 100vh;
     padding-top: 10rem;
 }
 
@@ -223,6 +223,6 @@ section.show {
 /* Fig Caption for audio */
 #audio-caption {
     mix-blend-mode: multiply;
-    color: #343a40;
+    color: black;
 }
 
