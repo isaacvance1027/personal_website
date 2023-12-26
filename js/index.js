@@ -153,6 +153,7 @@ function resizeHexagons() {
             position: absolute;
             top: -${Math.ceil(hexagonWidth * 0.3) - 1}px;
             right: 0;
+            transition: 0.1s ease-in;
         `;
 
         const afterPseudoElementStyle = `
@@ -165,6 +166,7 @@ function resizeHexagons() {
             border-color: inherit;
             border-left: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
             border-right: ${Math.ceil(hexagonWidth * 0.5)}px solid transparent;
+            transition: 0.1s ease-in;
         `;
 
         hexagonBeforeStyle.innerHTML = `.hex::before { ${beforePseudoElementStyle} }`;

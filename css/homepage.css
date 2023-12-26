@@ -123,6 +123,7 @@ button:hover {
     filter: blur(20px);
     transition: all 0.5s ease-in-out; /* Animation duration and easing */
     padding-top: 10rem;
+    height: 100vh;
 }
 
 .header.active {
