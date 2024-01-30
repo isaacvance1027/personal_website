@@ -171,7 +171,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-.hex:hover {    
+.hex:hover, .hex:focus {    
     color: #343a40;
     background-color: white;
     cursor: pointer;
@@ -205,7 +205,7 @@ section.show {
     transform: translateX(0);
 }
 
-.project:hover {
+.project:hover, .project:focus {
     color: #343a40 !important;
 }
 
