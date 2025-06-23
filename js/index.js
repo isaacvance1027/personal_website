@@ -66,7 +66,7 @@ projectsTab.addEventListener('mouseover', () => {
             project.style.transform = `translateX(${(i * -104)}%)`;
         } else if (width >= 1280) {
             project.style.transform = `translateX(${(i * -103)}%)`;
-        } 
+        }
 
     const hex5 = document.getElementById('h5');
 
@@ -86,12 +86,12 @@ projectsTab.addEventListener('mouseout', () => {
     });
 });
 
-// Select Resume div and reload 
+// Select Resume div and reload
 const resume = document.getElementById('resume');
 
 resume.addEventListener("click", () => {
     // Change the window.location.href to the desired URL
-    window.location.href = "./images/Isaac Vance's resume.pdf";
+    window.location.href = "./images/Isaac'sResume.pdf";
 });
 
 // Is this too much voodoo lmao; DOM manip is too damn wordy
@@ -113,7 +113,7 @@ function resizeHexagons() {
 
             hexagonWidth = Math.floor(baseParameter);
             hexagonHeight = Math.floor(hexagonWidth * 0.7);
-              
+
             // Linear interpolation between upper and lower limits needed for seemless resize
             // lerp(a,b,t) = a + t(b - a)
             // Calculate interpolation factor 't'
@@ -122,8 +122,8 @@ function resizeHexagons() {
             // Use linear interpolation to calculate marginTop
             marginTop = 2.25 + t * (3.5 - 2.25);
 
-            //Use same linear interpolation for text size            
-            textSize = 1.25 + t * (2 - 1.25); 
+            //Use same linear interpolation for text size
+            textSize = 1.25 + t * (2 - 1.25);
 
         } else if (width <= 750) {
             hexagonWidth = 62;
@@ -184,7 +184,7 @@ function resizeHexagons() {
 
         hexagonBeforeHoverStyle.innerHTML = `.hex:hover:before { ${hoverBeforePseudoElementStyle} }`;
         hexagonAfterHoverStyle.innerHTML = `.hex:hover:after { ${hoverAfterPseudoElementStyle} }`;
-                
+
     });
 }
 
@@ -208,7 +208,7 @@ function scrollToBio() {
 
 bio.addEventListener('click', scrollToBio);
 
-// Blockquote redirect 
+// Blockquote redirect
 const alanQuote = document.getElementById('alanQuote');
 
 alanQuote.addEventListener('click', () => {
