@@ -18,10 +18,10 @@ export default function App() {
       <Hero />
       <About />
       <Skills />
+      <Contact />
       <Experience />
       <Projects />
       <Music />
-      <Contact />
       <Footer />
     </div>
   )

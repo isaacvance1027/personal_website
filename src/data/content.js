@@ -29,10 +29,10 @@ export const socialLinks = [
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Music", href: "#music" },
-  { label: "Contact", href: "#contact" },
 ]
 
 export const skills = [
@@ -177,7 +177,7 @@ export const projects = [
     title: "Sentinel",
     description: "AI-powered democratic health monitoring system that ingests politically diverse news sources, economic data from FRED and Yahoo Finance, and produces daily briefings with structural threat and resilience indices via Claude. Includes portfolio analysis and AI chat.",
     tech: ["Ruby on Rails", "React", "Anthropic Claude", "Recharts", "MySQL"],
-    url: "https://github.com/isaacvance1027",
+    url: "https://sentinelwatcher.com",
     featured: true,
   },
   {
