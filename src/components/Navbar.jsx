@@ -58,9 +58,11 @@ export default function Navbar({ theme, toggleTheme }) {
               key={link.href}
               href={link.href}
               className={`px-3 py-2 text-[13px] font-medium rounded-lg transition-all duration-200 ${
-                activeSection === link.href.replace('#', '')
-                  ? 'text-primary bg-primary-glow'
-                  : 'text-text-muted hover:text-text-primary hover:bg-surface-elevated'
+                link.href === '#contact'
+                  ? 'bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-white hover:opacity-90 hover:shadow-lg hover:shadow-primary-glow'
+                  : activeSection === link.href.replace('#', '')
+                    ? 'text-primary bg-primary-glow'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-elevated'
               }`}
             >
               {link.label}
@@ -112,9 +114,11 @@ export default function Navbar({ theme, toggleTheme }) {
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    activeSection === link.href.replace('#', '')
-                      ? 'text-primary bg-primary-glow'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-surface-elevated'
+                    link.href === '#contact'
+                      ? 'bg-gradient-to-r from-[var(--color-gradient-start)] to-[var(--color-gradient-end)] text-white hover:opacity-90'
+                      : activeSection === link.href.replace('#', '')
+                        ? 'text-primary bg-primary-glow'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-surface-elevated'
                   }`}
                 >
                   {link.label}
