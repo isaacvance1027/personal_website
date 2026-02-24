@@ -212,6 +212,28 @@ export const music = {
   spotifyArtistUrl: "https://open.spotify.com/artist/5GYUtpEjPH0nJR8DvX9mDd",
   soundcloudUrl: "https://soundcloud.com/isaac-vance",
   spotifyEmbedUrl: "https://open.spotify.com/embed/artist/5GYUtpEjPH0nJR8DvX9mDd?utm_source=generator&theme=0",
+  bands: [
+    {
+      name: "Shady Oaks",
+      role: "Guitar, Bass & Vocals",
+      genre: "Indie Rock / Blues Rock / Garage Rock",
+      description: "Shady Oaks is an indie rock band from Denver that blends styles of alternative, blues and garage rock. The five-piece band brings listeners original music that is both dreamy and psychedelic, yet equally rugged.",
+      tags: ["Alternative", "Blues Rock", "Garage Rock", "Indie Rock", "Yallternative"],
+      spotifyEmbedUrl: "https://open.spotify.com/embed/artist/4HIwTk417WhtcbGLItzwKM?utm_source=generator",
+      spotifyArtistUrl: "https://open.spotify.com/artist/4HIwTk417WhtcbGLItzwKM",
+      bandcampUrl: "https://shadyoaks.bandcamp.com",
+    },
+    {
+      name: "Mr. Knobs",
+      role: "Mixing, Bass & Guitar",
+      genre: "Electro Pop / Prog Pop",
+      description: "Mr. Knobs is a Denver-based electro pop project blending catchy melodies with progressive arrangements and a touch of dada. Their debut EP features Isaac on mixing, bass, and guitar alongside vocalist Vidushi Goyal.",
+      tags: ["Electro Pop", "Prog Pop", "Dada", "Pop"],
+      spotifyEmbedUrl: "https://open.spotify.com/embed/artist/6DOQwpUIylSjvcrWLPCi62?utm_source=generator",
+      spotifyArtistUrl: "https://open.spotify.com/artist/6DOQwpUIylSjvcrWLPCi62",
+      bandcampUrl: "https://mrknobs.bandcamp.com",
+    },
+  ],
 }
 
 export const interests = [
